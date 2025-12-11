@@ -1,82 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
   <defs>
-    <linearGradient id="controllerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#1D4ED8;stop-opacity:1" />
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
     </linearGradient>
-    <linearGradient id="usecaseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#6D28D9;stop-opacity:1" />
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9900"/>
+      <stop offset="100%" style="stop-color:#FF6600"/>
     </linearGradient>
-    <linearGradient id="portGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#EC4899;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#BE185D;stop-opacity:1" />
-    </linearGradient>
-    <linearGradient id="adapterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#D97706;stop-opacity:1" />
-    </linearGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.15"/>
-    </filter>
   </defs>
 
   <!-- Background -->
-  <rect width="600" height="450" fill="#0F172A"/>
+  <rect width="800" height="500" fill="#0d1117"/>
 
-  <!-- Controllers Layer -->
-  <g filter="url(#shadow)">
-    <rect x="100" y="30" width="400" height="80" rx="12" fill="url(#controllerGrad)"/>
-    <text x="300" y="60" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">Controllers (Kubernetes Reconcilers)</text>
-    <text x="300" y="85" font-family="JetBrains Mono, monospace" font-size="12" fill="#93C5FD" text-anchor="middle">VPCReconciler, EC2Reconciler, S3Reconciler...</text>
-  </g>
+  <!-- Title -->
+  <text x="400" y="40" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">Clean Architecture</text>
 
-  <!-- Arrow 1 -->
-  <path d="M300 110 L300 135" stroke="#475569" stroke-width="2" stroke-dasharray="4,4"/>
-  <polygon points="300,145 295,135 305,135" fill="#475569"/>
+  <!-- Layer 1: Controllers -->
+  <rect x="150" y="70" width="500" height="70" rx="8" fill="#1f6feb" opacity="0.15" stroke="#1f6feb" stroke-width="1.5"/>
+  <circle cx="180" cy="105" r="16" fill="#1f6feb"/>
+  <text x="180" y="110" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+  <text x="220" y="98" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#58a6ff">Controllers</text>
+  <text x="220" y="118" font-family="ui-monospace, monospace" font-size="12" fill="#8b949e">Kubernetes Reconcilers (VPC, EC2, S3, RDS...)</text>
 
-  <!-- Use Cases Layer -->
-  <g filter="url(#shadow)">
-    <rect x="100" y="145" width="400" height="80" rx="12" fill="url(#usecaseGrad)"/>
-    <text x="300" y="175" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">Use Cases (Business Logic)</text>
-    <text x="300" y="200" font-family="JetBrains Mono, monospace" font-size="12" fill="#C4B5FD" text-anchor="middle">CreateVPC, UpdateEC2, DeleteS3...</text>
-  </g>
+  <!-- Arrow -->
+  <line x1="400" y1="140" x2="400" y2="165" stroke="#30363d" stroke-width="2"/>
+  <polygon points="400,175 394,165 406,165" fill="#30363d"/>
 
-  <!-- Arrow 2 -->
-  <path d="M300 225 L300 250" stroke="#475569" stroke-width="2" stroke-dasharray="4,4"/>
-  <polygon points="300,260 295,250 305,250" fill="#475569"/>
+  <!-- Layer 2: Use Cases -->
+  <rect x="150" y="180" width="500" height="70" rx="8" fill="#8957e5" opacity="0.15" stroke="#8957e5" stroke-width="1.5"/>
+  <circle cx="180" cy="215" r="16" fill="#8957e5"/>
+  <text x="180" y="220" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+  <text x="220" y="208" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#bc8cff">Use Cases</text>
+  <text x="220" y="228" font-family="ui-monospace, monospace" font-size="12" fill="#8b949e">Business Logic (Create, Update, Delete, Get)</text>
 
-  <!-- Ports Layer -->
-  <g filter="url(#shadow)">
-    <rect x="100" y="260" width="400" height="80" rx="12" fill="url(#portGrad)"/>
-    <text x="300" y="290" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">Ports (Interfaces)</text>
-    <text x="300" y="315" font-family="JetBrains Mono, monospace" font-size="12" fill="#FBCFE8" text-anchor="middle">VPCPort, EC2Port, S3Port...</text>
-  </g>
+  <!-- Arrow -->
+  <line x1="400" y1="250" x2="400" y2="275" stroke="#30363d" stroke-width="2"/>
+  <polygon points="400,285 394,275 406,275" fill="#30363d"/>
 
-  <!-- Arrow 3 -->
-  <path d="M300 340 L300 365" stroke="#475569" stroke-width="2" stroke-dasharray="4,4"/>
-  <polygon points="300,375 295,365 305,365" fill="#475569"/>
+  <!-- Layer 3: Ports -->
+  <rect x="150" y="290" width="500" height="70" rx="8" fill="#f778ba" opacity="0.15" stroke="#f778ba" stroke-width="1.5"/>
+  <circle cx="180" cy="325" r="16" fill="#f778ba"/>
+  <text x="180" y="330" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+  <text x="220" y="318" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#ffa0c8">Ports</text>
+  <text x="220" y="338" font-family="ui-monospace, monospace" font-size="12" fill="#8b949e">Interfaces (VPCPort, EC2Port, S3Port...)</text>
 
-  <!-- Adapters Layer -->
-  <g filter="url(#shadow)">
-    <rect x="100" y="375" width="400" height="80" rx="12" fill="url(#adapterGrad)"/>
-    <text x="300" y="405" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="white" text-anchor="middle">Adapters (AWS SDK v2)</text>
-    <text x="300" y="430" font-family="JetBrains Mono, monospace" font-size="12" fill="#FDE68A" text-anchor="middle">VPCAdapter, EC2Adapter, S3Adapter...</text>
-  </g>
+  <!-- Arrow -->
+  <line x1="400" y1="360" x2="400" y2="385" stroke="#30363d" stroke-width="2"/>
+  <polygon points="400,395 394,385 406,385" fill="#30363d"/>
 
-  <!-- Side Labels -->
-  <text x="60" y="70" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#64748B" text-anchor="middle" transform="rotate(-90, 60, 70)">INBOUND</text>
-  <text x="60" y="420" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#64748B" text-anchor="middle" transform="rotate(-90, 60, 420)">OUTBOUND</text>
+  <!-- Layer 4: Adapters -->
+  <rect x="150" y="400" width="500" height="70" rx="8" fill="#ff9900" opacity="0.15" stroke="#ff9900" stroke-width="1.5"/>
+  <circle cx="180" cy="435" r="16" fill="#ff9900"/>
+  <text x="180" y="440" font-family="system-ui, sans-serif" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">4</text>
+  <text x="220" y="428" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#ffb84d">Adapters</text>
+  <text x="220" y="448" font-family="ui-monospace, monospace" font-size="12" fill="#8b949e">AWS SDK v2 (VPCAdapter, EC2Adapter...)</text>
 
-  <!-- AWS Cloud Icon (right side) -->
-  <g transform="translate(530, 400)">
-    <rect x="0" y="0" width="50" height="35" rx="4" fill="#FF9900" opacity="0.2"/>
-    <text x="25" y="22" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600" fill="#FF9900" text-anchor="middle">AWS</text>
-  </g>
+  <!-- Left side: Kubernetes -->
+  <rect x="30" y="70" width="90" height="70" rx="8" fill="#326ce5" opacity="0.2" stroke="#326ce5" stroke-width="1"/>
+  <text x="75" y="100" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#326ce5" text-anchor="middle">Kubernetes</text>
+  <text x="75" y="118" font-family="system-ui, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle">kubectl / CRDs</text>
 
-  <!-- Kubernetes Icon (left side) -->
-  <g transform="translate(20, 45)">
-    <rect x="0" y="0" width="50" height="35" rx="4" fill="#326CE5" opacity="0.2"/>
-    <text x="25" y="22" font-family="Inter, system-ui, sans-serif" font-size="10" font-weight="600" fill="#326CE5" text-anchor="middle">K8s</text>
-  </g>
+  <!-- Arrow from K8s -->
+  <line x1="120" y1="105" x2="145" y2="105" stroke="#326ce5" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <polygon points="150,105 143,101 143,109" fill="#326ce5"/>
+
+  <!-- Right side: AWS -->
+  <rect x="680" y="400" width="90" height="70" rx="8" fill="#ff9900" opacity="0.2" stroke="#ff9900" stroke-width="1"/>
+  <text x="725" y="430" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#ff9900" text-anchor="middle">AWS</text>
+  <text x="725" y="448" font-family="system-ui, sans-serif" font-size="10" fill="#6e7681" text-anchor="middle">Cloud APIs</text>
+
+  <!-- Arrow to AWS -->
+  <line x1="655" y1="435" x2="675" y2="435" stroke="#ff9900" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <polygon points="680,435 673,431 673,439" fill="#ff9900"/>
+
+  <!-- Side labels -->
+  <text x="75" y="250" font-family="system-ui, sans-serif" font-size="10" fill="#484f58" text-anchor="middle" transform="rotate(-90, 75, 250)">INBOUND</text>
+  <text x="725" y="250" font-family="system-ui, sans-serif" font-size="10" fill="#484f58" text-anchor="middle" transform="rotate(90, 725, 250)">OUTBOUND</text>
 </svg>
