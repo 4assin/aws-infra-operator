@@ -1,55 +1,50 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 280">
-  <!-- Clean white background -->
-  <rect width="800" height="280" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4facfe"/>
+      <stop offset="100%" style="stop-color:#00f2fe"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#6366f1"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff9900"/>
+      <stop offset="100%" style="stop-color:#ffb347"/>
+    </linearGradient>
+  </defs>
 
-  <!-- YAML/kubectl input -->
-  <rect x="30" y="100" width="120" height="80" rx="8" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
-  <text x="90" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#24292f" text-anchor="middle">YAML</text>
-  <text x="90" y="155" font-family="ui-monospace, monospace" font-size="10" fill="#57606a" text-anchor="middle">kubectl / CLI</text>
+  <rect width="600" height="320" fill="url(#bg)"/>
 
-  <!-- Arrow 1 -->
-  <path d="M155 140 L195 140" stroke="#d0d7de" stroke-width="2"/>
-  <polygon points="200,140 192,136 192,144" fill="#d0d7de"/>
+  <!-- Kubernetes icon area -->
+  <circle cx="80" cy="160" r="45" fill="none" stroke="#326ce5" stroke-width="2" opacity="0.8"/>
+  <text x="80" y="155" font-family="system-ui" font-size="11" font-weight="600" fill="#326ce5" text-anchor="middle">Kubernetes</text>
+  <text x="80" y="172" font-family="monospace" font-size="9" fill="#64748b" text-anchor="middle">or CLI</text>
 
-  <!-- Controllers -->
-  <rect x="205" y="100" width="120" height="80" rx="8" fill="#ddf4ff" stroke="#54aeff" stroke-width="1"/>
-  <text x="265" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#0969da" text-anchor="middle">Controllers</text>
-  <text x="265" y="155" font-family="ui-monospace, monospace" font-size="10" fill="#0969da" text-anchor="middle">Reconcilers</text>
+  <!-- Flow line -->
+  <path d="M130 160 L470 160" stroke="#334155" stroke-width="1" stroke-dasharray="4,4"/>
 
-  <!-- Arrow 2 -->
-  <path d="M330 140 L370 140" stroke="#d0d7de" stroke-width="2"/>
-  <polygon points="375,140 367,136 367,144" fill="#d0d7de"/>
+  <!-- Central hexagon representing clean architecture -->
+  <polygon points="300,70 380,110 380,210 300,250 220,210 220,110" fill="none" stroke="url(#purple)" stroke-width="2" opacity="0.6"/>
 
-  <!-- Use Cases -->
-  <rect x="380" y="100" width="120" height="80" rx="8" fill="#fbefff" stroke="#a475f9" stroke-width="1"/>
-  <text x="440" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#8250df" text-anchor="middle">Use Cases</text>
-  <text x="440" y="155" font-family="ui-monospace, monospace" font-size="10" fill="#8250df" text-anchor="middle">Business Logic</text>
+  <!-- Inner layers -->
+  <text x="300" y="115" font-family="system-ui" font-size="10" fill="#94a3b8" text-anchor="middle">Controllers</text>
+  <text x="300" y="145" font-family="system-ui" font-size="12" font-weight="600" fill="url(#blue)" text-anchor="middle">Use Cases</text>
+  <text x="300" y="175" font-family="system-ui" font-size="10" fill="#94a3b8" text-anchor="middle">Ports</text>
+  <text x="300" y="205" font-family="system-ui" font-size="10" fill="#94a3b8" text-anchor="middle">Adapters</text>
 
-  <!-- Arrow 3 -->
-  <path d="M505 140 L545 140" stroke="#d0d7de" stroke-width="2"/>
-  <polygon points="550,140 542,136 542,144" fill="#d0d7de"/>
+  <!-- AWS icon area -->
+  <circle cx="520" cy="160" r="45" fill="none" stroke="url(#orange)" stroke-width="2" opacity="0.8"/>
+  <text x="520" y="165" font-family="system-ui" font-size="14" font-weight="700" fill="#ff9900" text-anchor="middle">AWS</text>
 
-  <!-- Adapters -->
-  <rect x="555" y="100" width="120" height="80" rx="8" fill="#fff8c5" stroke="#d4a72c" stroke-width="1"/>
-  <text x="615" y="135" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#9a6700" text-anchor="middle">Adapters</text>
-  <text x="615" y="155" font-family="ui-monospace, monospace" font-size="10" fill="#9a6700" text-anchor="middle">AWS SDK v2</text>
-
-  <!-- Arrow 4 -->
-  <path d="M680 140 L720 140" stroke="#d0d7de" stroke-width="2"/>
-  <polygon points="725,140 717,136 717,144" fill="#d0d7de"/>
-
-  <!-- AWS -->
-  <rect x="730" y="100" width="50" height="80" rx="8" fill="#ff9900" stroke="#cc7a00" stroke-width="1"/>
-  <text x="755" y="145" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">AWS</text>
-
-  <!-- Labels below -->
-  <text x="90" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#57606a" text-anchor="middle">Input</text>
-  <text x="265" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#57606a" text-anchor="middle">K8s Layer</text>
-  <text x="440" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#57606a" text-anchor="middle">Domain</text>
-  <text x="615" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#57606a" text-anchor="middle">Infrastructure</text>
-  <text x="755" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#57606a" text-anchor="middle">Cloud</text>
+  <!-- Dots on flow line -->
+  <circle cx="175" cy="160" r="4" fill="#4facfe"/>
+  <circle cx="425" cy="160" r="4" fill="#ff9900"/>
 
   <!-- Title -->
-  <text x="400" y="45" font-family="system-ui, -apple-system, sans-serif" font-size="16" font-weight="600" fill="#24292f" text-anchor="middle">Clean Architecture</text>
-  <text x="400" y="65" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#57606a" text-anchor="middle">Hexagonal / Ports &amp; Adapters Pattern</text>
+  <text x="300" y="290" font-family="system-ui" font-size="13" fill="#e2e8f0" text-anchor="middle">Clean Architecture • Hexagonal Pattern</text>
 </svg>
