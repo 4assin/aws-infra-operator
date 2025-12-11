@@ -21,7 +21,7 @@ image:
   # Registro de contêiner
   registry: ghcr.io
   # Repositório da imagem
-  repository: andrebassi/infra-operator-aws
+  repository: andrebassi/aws-infra-operator
   # Política de pull da imagem
   pullPolicy: IfNotPresent
   # Sobrescreve a tag da imagem (default is Chart.appVersion)

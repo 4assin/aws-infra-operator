@@ -24,8 +24,8 @@ Resource state is stored locally in JSON files in the `~/.infra-operator/state/`
 
 ```bash
 # Clone the repository
-git clone https://github.com/andrebassi/infra-operator-aws.git
-cd infra-operator-aws
+git clone https://github.com/andrebassi/aws-infra-operator.git
+cd aws-infra-operator
 
 # Build the binary
 CGO_ENABLED=0 go build -o infra-operator cmd/main.go

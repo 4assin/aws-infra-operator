@@ -12,9 +12,9 @@ keywords:
   - kubebuilder
   - gitops
   - clean-architecture
-home: https://github.com/andrebassi/infra-operator-aws
+home: https://github.com/andrebassi/aws-infra-operator
 sources:
-  - https://github.com/andrebassi/infra-operator-aws
+  - https://github.com/andrebassi/aws-infra-operator
 maintainers:
   - name: Andre Bassi
     email: andre@example.com

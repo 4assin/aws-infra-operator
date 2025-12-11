@@ -166,7 +166,7 @@ jobs:
             ### Docker Image
 
             ```bash
-            docker pull ghcr.io/andrebassi/infra-operator-aws:${{ steps.version.outputs.VERSION }}
+            docker pull ghcr.io/andrebassi/aws-infra-operator:${{ steps.version.outputs.VERSION }}
             ```
 
             ### Documentation
